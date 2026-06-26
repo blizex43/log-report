@@ -1,0 +1,109 @@
+{
+    "id": "5e5059d1-49c6-43b8-b81d-f03b44175c8e",
+    "task_name": "dynamo/log-report",
+    "trial_name": "log-report__6Nt8DYk",
+    "trial_uri": "file:///C:/Users/Jonathan/Downloads/log-report/jobs/2026-06-25__22-20-38/log-report__6Nt8DYk",
+    "task_id": {
+        "path": "."
+    },
+    "source": null,
+    "task_checksum": "8fdc42d75b13287a463536852298d9a97b1e278b5b64837555df9e3648885dcf",
+    "config": {
+        "task": {
+            "path": ".",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "log-report__6Nt8DYk",
+        "trials_dir": "jobs\\2026-06-25__22-20-38",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "oracle",
+            "import_path": null,
+            "model_name": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "0e62b54d-7b78-4b7d-8e19-fc11d6942b1a"
+    },
+    "agent_info": {
+        "name": "oracle",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": null,
+    "exception_info": {
+        "exception_type": "RewardFileNotFoundError",
+        "exception_message": "No reward file found at jobs\\2026-06-25__22-20-38\\log-report__6Nt8DYk\\verifier\\reward.txt or jobs\\2026-06-25__22-20-38\\log-report__6Nt8DYk\\verifier\\reward.json",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Jonathan\\AppData\\Roaming\\Python\\Python313\\site-packages\\harbor\\trial\\trial.py\", line 338, in run\n    await self._run()\n  File \"C:\\Users\\Jonathan\\AppData\\Roaming\\Python\\Python313\\site-packages\\harbor\\trial\\single_step.py\", line 46, in _run\n    await self._run_verifier()\n  File \"C:\\Users\\Jonathan\\AppData\\Roaming\\Python\\Python313\\site-packages\\harbor\\trial\\single_step.py\", line 99, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"C:\\Users\\Jonathan\\AppData\\Roaming\\Python\\Python313\\site-packages\\harbor\\trial\\trial.py\", line 508, in _run_shared_verifier\n    return await asyncio.wait_for(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n        verifier.verify(), timeout=timeout_sec\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Python313\\Lib\\asyncio\\tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"C:\\Users\\Jonathan\\AppData\\Roaming\\Python\\Python313\\site-packages\\harbor\\verifier\\verifier.py\", line 232, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at jobs\\2026-06-25__22-20-38\\log-report__6Nt8DYk\\verifier\\reward.txt or jobs\\2026-06-25__22-20-38\\log-report__6Nt8DYk\\verifier\\reward.json\n",
+        "occurred_at": "2026-06-25T22:21:07.588766"
+    },
+    "started_at": "2026-06-26T05:20:38.965078Z",
+    "finished_at": "2026-06-26T05:21:10.731691Z",
+    "environment_setup": {
+        "started_at": "2026-06-26T05:20:39.620879Z",
+        "finished_at": "2026-06-26T05:21:05.389885Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-06-26T05:21:05.389937Z",
+        "finished_at": "2026-06-26T05:21:05.389989Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-06-26T05:21:05.390057Z",
+        "finished_at": "2026-06-26T05:21:06.286594Z"
+    },
+    "verifier": {
+        "started_at": "2026-06-26T05:21:06.634923Z",
+        "finished_at": "2026-06-26T05:21:07.586639Z"
+    },
+    "step_results": null
+}

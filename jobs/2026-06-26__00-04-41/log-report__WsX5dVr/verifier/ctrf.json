@@ -1,0 +1,50 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1782457510.121842,
+            "stop": 1782457510.1468585
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_report_exists",
+                "status": "passed",
+                "duration": 0.0005298240012052702,
+                "start": 1782457510.1309993,
+                "stop": 1782457510.1321743,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_report_schema",
+                "status": "passed",
+                "duration": 0.0003796169985434972,
+                "start": 1782457510.1323571,
+                "stop": 1782457510.133193,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_report_values_basic",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0006672300023637945,
+                "start": 1782457510.1333818,
+                "stop": 1782457510.1462827,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_report_values_basic():\n        \"\"\"Success Criterion: report values are valid types and non-empty\"\"\"\n        data = load()\n    \n        assert isinstance(data[\"total_requests\"], int)\n        assert isinstance(data[\"unique_ips\"], int)\n        assert isinstance(data[\"top_path\"], str)\n    \n>       assert data[\"total_requests\"] > 0\nE       assert -993 > 0\n\n/tests/test_outputs.py:30: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

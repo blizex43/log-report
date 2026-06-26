@@ -1,0 +1,5 @@
+RUNNING SOLVE.PY
+wrote /app/report.json
+TOTAL: 6
+IPS: 3
+PATHS: Counter({'/index.html': 3, '/about.html': 2, '/api/login': 1})

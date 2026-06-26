@@ -1,0 +1,24 @@
+Skipping image OS validation for hb__log-report: docker inspect returned 1
+Collecting main service artifacts
+Failed to download artifact '/app/report.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "C:\Users\Jonathan\AppData\Roaming\Python\Python313\site-packages\harbor\trial\artifact_handler.py", line 330, in _download_artifact
+    await source_env.service_download_file(
+    ...<3 lines>...
+    )
+  File "C:\Users\Jonathan\AppData\Roaming\Python\Python313\site-packages\harbor\environments\docker\docker.py", line 721, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "C:\Users\Jonathan\AppData\Roaming\Python\Python313\site-packages\harbor\environments\docker\docker.py", line 706, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "C:\Users\Jonathan\AppData\Roaming\Python\Python313\site-packages\harbor\environments\docker\docker_unix.py", line 56, in download_file
+    await self._env._run_docker_compose_command(
+    ...<2 lines>...
+    )
+  File "C:\Users\Jonathan\AppData\Roaming\Python\Python313\site-packages\harbor\environments\docker\docker.py", line 419, in _run_docker_compose_command
+    raise RuntimeError(
+    ...<5 lines>...
+    )
+RuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__tjhlokp --project-directory C:\Users\Jonathan\Downloads\log-report\environment -f C:\Users\Jonathan\AppData\Local\Temp\tmptq5oknsw\log-report__tjHLoKP-docker-compose-resources.json -f C:\Users\Jonathan\AppData\Roaming\Python\Python313\site-packages\harbor\environments\docker\docker-compose-build.yaml -f C:\Users\Jonathan\AppData\Local\Temp\tmp9pzhtlhi\docker-compose-mounts.json -f C:\Users\Jonathan\AppData\Roaming\Python\Python313\site-packages\harbor\environments\docker\docker-compose-no-network.yaml cp main:/app/report.json jobs\2026-06-25__22-28-47\log-report__tjHLoKP\artifacts\app\report.json. Return code: 1. Stdout:  log-report__tjhlokp-main-1 Copying log-report__tjhlokp-main-1:/app/report.json to jobs\2026-06-25__22-28-47\log-report__tjHLoKP\artifacts\app\report.json
+Error response from daemon: Could not find the file /app/report.json in container 40d23780a095752de4e76a35b42e5ee3ab3557a838a49c64d32ef7aa909028dd
+. Stderr: None. 
+Trial log-report__tjHLoKP failed: No reward file found at jobs\2026-06-25__22-28-47\log-report__tjHLoKP\verifier\reward.txt or jobs\2026-06-25__22-28-47\log-report__tjHLoKP\verifier\reward.json

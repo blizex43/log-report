@@ -1,0 +1,3 @@
+Skipping image OS validation for hb__log-report: docker inspect returned 1
+Collecting main service artifacts
+Trial log-report__WsX5dVr failed: No reward file found at jobs\2026-06-26__00-04-41\log-report__WsX5dVr\verifier\reward.txt or jobs\2026-06-26__00-04-41\log-report__WsX5dVr\verifier\reward.json
